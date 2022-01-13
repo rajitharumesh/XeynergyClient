@@ -1,0 +1,23 @@
+<p>list-users works!</p>
+<table>
+  <tr *ngFor="let user of userList">
+    <td>
+      {{ user.firstName }}
+    </td>
+    <td>
+      {{ user.lastName }}
+    </td>
+    <td>
+      {{ user.email }}
+    </td>
+    <td>
+      <a [routerLink]="['/user/list/view', user.userId]">View</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user/list/edit', user.userId]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/user/list/delete', user.userId]">Delete</a>
+    </td>
+  </tr>
+</table>
